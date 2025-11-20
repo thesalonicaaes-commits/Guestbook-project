@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const apiUrl = 'https://f48geda4u7.execute-api.us-east-1.amazonaws.com/1'; // Ganti dengan URL API Gateway Anda
+    const apiUrl = 'https://f48geda4u7.execute-api.us-east-1.amazonaws.com/1/guests'; // Ganti dengan URL API Gateway Anda
     let selectedGuestId = null; // Menyimpan ID tamu yang dipilih untuk diupdate
 
     // Fungsi untuk menampilkan notifikasi
@@ -18,7 +18,7 @@ $(document).ready(function() {
     // Fetch guests (READ - GET)
     function loadGuests() {
         $.ajax({
-            url: apiUrl/guests,
+            url: apiUrl,
             method: 'GET',
             success: function(response) {
                 console.log('Respons API:', response); // Debug: Lihat respons API di konsol
@@ -123,6 +123,7 @@ $(document).ready(function() {
     // Load daftar tamu saat halaman dimuat
     loadGuests();
 });
+
 
 
 
